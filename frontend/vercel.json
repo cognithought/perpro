@@ -4,7 +4,6 @@
   "installCommand": "npm install",
   "outputDirectory": "dist",
   "framework": "vite",
-  "nodejs": "18.x",
   "env": {
     "VITE_API_URL": {
       "description": "Backend API URL (e.g., https://your-backend.com or http://localhost:8000)"
