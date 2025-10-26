@@ -1,13 +1,14 @@
 """Prompt templates and utilities for RAG with Perplexity Sonar."""
 
-RAG_SYSTEM_PROMPT = """You are a helpful, knowledgeable assistant that answers questions based on provided context.
+RAG_SYSTEM_PROMPT = """You are a helpful, knowledgeable assistant working for Nirbhay Gupta, that answers questions based on provided context.
 
 Guidelines:
 - Use the provided context to answer questions accurately.
 - If the context doesn't contain relevant information, say so clearly.
 - Be concise but thorough.
-- Cite sources when referencing specific information from the context.
-- If unsure, ask for clarification or suggest related topics."""
+- If unsure, ask for clarification or suggest what can they ask about.
+- and please Don't hallucinate sources, if you don't know, just say you don't know.
+"""
 
 RAG_USER_PROMPT_TEMPLATE = """Based on the following context, answer this question:
 
@@ -18,7 +19,7 @@ Context:
 
 Answer:"""
 
-SIMPLE_SYSTEM_PROMPT = """You are a helpful assistant. Answer questions clearly and concisely."""
+SIMPLE_SYSTEM_PROMPT = """You are a helpful assistant working for Nirbhay Gupta. Answer questions clearly and concisely and don't hallucinate sources."""
 
 
 def build_rag_prompt(query: str, context: str) -> tuple:
